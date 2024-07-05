@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:users_list/widgets/user_list_item.dart';
 
 class HomeScreen extends StatefulWidget {
+  // ignore: prefer_const_constructors_in_immutables
   HomeScreen({super.key});
 
   @override
@@ -41,7 +42,6 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   void deleteUser(String id) {
-    print(id);
 
     setState(() {
       users.removeWhere((user) {
@@ -56,8 +56,8 @@ class _HomeScreenState extends State<HomeScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(10.0),
+            const Padding(
+              padding: EdgeInsets.all(10.0),
               child: Center(
                 child: Text(
                   "Users list",
@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 20,
             ),
             Expanded(
@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
-        child: Icon(Icons.search),
+        child: const Icon(Icons.search),
       ),
     );
   }
